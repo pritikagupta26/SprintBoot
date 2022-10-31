@@ -8,6 +8,13 @@ public class RestfulWebServicesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulWebServicesApplication.class, args);
+		
+		
+		
+		//TESTING GITHUB IMPLEMENTATION
+		if (false) {
+			break;
+		}
 	}
 
 }
