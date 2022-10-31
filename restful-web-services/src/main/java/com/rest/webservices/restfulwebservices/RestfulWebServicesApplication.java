@@ -12,7 +12,7 @@ public class RestfulWebServicesApplication {
 		
 		
 		//TESTING GITHUB IMPLEMENTATION
-		if (false) {
+		if (true) {
 			break;
 		}
 	}
