@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="restful-web-services:test" external.linked.project.path="$MODULE_DIR$/../../restful-web-services" external.root.project.path="$MODULE_DIR$/../../restful-web-services" external.system.id="GRADLE" external.system.module.group="com.rest.webservices" external.system.module.type="sourceSet" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
+  <component name="NewModuleRootManager">
     <output-test url="file://$MODULE_DIR$/../../restful-web-services/build/classes/java/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../restful-web-services/src/test">
@@ -94,4 +94,5 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.sun.activation:jakarta.activation:1.2.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="restful-web-services.main" />
 </module>
