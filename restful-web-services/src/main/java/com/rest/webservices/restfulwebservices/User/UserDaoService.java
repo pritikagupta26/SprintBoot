@@ -4,26 +4,34 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.rest.webservices.restfulwebservices.jpa.UserRepository;
 
 @Component
 public class UserDaoService {
 
-	private static int userCount =0;
+	
+	@Autowired
+	private UserRepository repository;
+	
+	//private static int userCount =0;
 	//Creating Static List
-	private static List<User> users = new ArrayList<>();
-	static {
-		users.add(new User(++userCount, "Katte", LocalDate.now().minusYears(30)));
-		users.add(new User(++userCount, "Eve", LocalDate.now().minusYears(20)));
-		users.add(new User(++userCount, "Jim", LocalDate.now().minusYears(25)));
-	}
-
+	//private static List<User> users = new ArrayList<>();
+	/*
+	 * static { users.add(new User(++userCount, "K1tte",
+	 * LocalDate.now().minusYears(30))); users.add(new User(++userCount, "1Eve",
+	 * LocalDate.now().minusYears(20))); users.add(new User(++userCount, "1Jim",
+	 * LocalDate.now().minusYears(25))); }
+	 */
 	public List<User> findAll(){
-		return users;
+		return repository.findAll();
 	}
 	
 	public User findUser(int id) {
-		for(User user : users) {
+		List<User> alluser = repository.findAll();
+		for(User user : alluser) {
 			if(user.getId().equals(id)) {
 				return user;
 			}
@@ -31,9 +39,9 @@ public class UserDaoService {
 		return null;
 	}
 	
-	public User save(User userDetails) {
-		userDetails.setId(userCount);
-		users.add(userDetails);
-		return userDetails;
+	public void save(User userDetails) {
+		//userDetails.setId(userCount);
+		//users.add(userDetails);
+		repository.save(userDetails);
 	}
 }

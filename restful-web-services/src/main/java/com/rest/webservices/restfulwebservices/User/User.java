@@ -2,11 +2,19 @@ package com.rest.webservices.restfulwebservices.User;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Entity(name= "user_details")
 public class User {
+	@Id
+	@GeneratedValue
 	private Integer id;
+	
 	private String name;
 	private LocalDate birthdate;
 	
